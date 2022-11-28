@@ -8,7 +8,12 @@ type HeaderProps = {
 
 export default function index({image,height,text}:HeaderProps) {
   return (
-    <div className={`${height} w-full flex flex-wrap bg-gray-500`} style={{backgroundImage: `url(${image})`}}>
+    <div 
+      className={`${height} w-full flex flex-wrap bg-gray-500`} 
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: 'cover'
+        }}>
         {text && <div className='m-auto w-10/12'>
             </div>}
     </div>

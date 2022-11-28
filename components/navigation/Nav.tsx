@@ -100,10 +100,18 @@ export default function Nav() {
             </Popover.Button>
           </div>
 
+          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
             <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
             Home
             </a>
-          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+
+            <a href="/about" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            About Us
+            </a>
+
+            <a href="/enrolment" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            Enrolment
+            </a>
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -113,7 +121,7 @@ export default function Nav() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Classes</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -168,10 +176,6 @@ export default function Nav() {
                 </>
               )}
             </Popover>
-
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Pricing
-            </a>
             <a href="/contact" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Contact
             </a>
@@ -289,9 +293,9 @@ export default function Nav() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
+              {/* <div className="mt-6">
+                <nav className="grid gap-y-8"> */}
+                  {/* {solutions.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -300,20 +304,28 @@ export default function Nav() {
                       <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
                       <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                     </a>
-                  ))}
-                </nav>
-              </div>
+                  ))} */}
+                {/* </nav>
+              </div> */}
             </div>
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Pricing
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Home
                 </a>
 
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Docs
+                <a href="/about" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                About Us
                 </a>
-                {resources.map((item) => (
+
+                <a href="/enrolment" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Enrolment
+                </a>
+
+                <a href="/contact" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Contact
+                </a>
+                {/* {resources.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -321,7 +333,7 @@ export default function Nav() {
                   >
                     {item.name}
                   </a>
-                ))}
+                ))} */}
               </div>
               <div>
                 <a

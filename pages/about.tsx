@@ -11,6 +11,9 @@ export default function About() {
       </Head>
 
       <Header height="h-56"/>
+      <div>
+        About
+      </div>
     </div>
   )
 }
