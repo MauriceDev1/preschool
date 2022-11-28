@@ -3,15 +3,19 @@ import React from 'react'
 export default function Footer() {
   return (
     <div className='flex w-full py-20 bg-red-600'>
-        <div className='sm:w-9/12 bg-gray-100 m-auto flex flex-wrap'>
-          <div className='w-full sm:w-1/3 bg-yellow-100'>
-            test
+        <div className='w-11/12 sm:w-8/12 m-auto flex flex-wrap'>
+          <div className='w-full sm:w-1/3'>
+            <div className='text-white font-semibold'>
+              Site Map
+            </div>
           </div>
-          <div className='w-full sm:w-1/3 bg-yellow-100'>
-            test
+          <div className='w-full sm:w-1/3'>
+            <div className='text-white font-semibold'>More</div>
           </div>
-          <div className='w-full sm:w-1/3 bg-yellow-100'>
-            test
+          <div className='w-full sm:w-1/3'>
+            <div className='text-white font-semibold'>
+              Social Media
+            </div>
           </div>
         </div>
     </div>
