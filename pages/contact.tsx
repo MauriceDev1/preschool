@@ -11,6 +11,9 @@ export default function Contact() {
       </Head>
 
       <Header height="h-96"/>
+      <div>
+        Contact
+      </div>
     </div>
   )
 }

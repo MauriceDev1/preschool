@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96"/>
+      <Header height="h-[100vh]"/>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Nav from '../components/navigation/Nav'
 import Footer from '../components/navigation/Footer'
 
 type LayoutProps = {
@@ -8,6 +9,7 @@ type LayoutProps = {
 export default function General({children}: LayoutProps) {
   return (
     <>
+        <Nav />
         {children}
         <Footer />
     </>
