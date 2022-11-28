@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <Header 
-        height="h-[100vh]"
+        height="h-96 sm:h-[100vh]"
         image="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
     </div>
   )
