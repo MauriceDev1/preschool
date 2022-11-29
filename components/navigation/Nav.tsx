@@ -178,7 +178,6 @@ export default function Nav() {
                             >
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
                             </a>
                           ))}
