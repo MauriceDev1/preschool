@@ -10,7 +10,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-56"/>
+      <Header height="h-96"/>
       <div>
         About
       </div>

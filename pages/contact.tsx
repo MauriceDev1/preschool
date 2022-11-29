@@ -10,9 +10,56 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96"/>
-      <div>
-        Contact
+      <Header height="h-96" image="https://images.unsplash.com/photo-1609140070027-e721c67234b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"/>
+      <div className='w-full py-10 flex'>
+        <div className='flex w-10/12 p-5 m-auto'>
+          <div className='w-1/2 py-6'>
+            <div>
+              <div className='font-semibold pb-2'>Name</div>
+              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="name" />
+              <div className='font-semibold py-2'>Surname</div>
+              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="surname" />
+              <div className='font-semibold py-2'>Mobile</div>
+              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="mobile" />
+              <div className='font-semibold py-2'>Email</div>
+              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="email" />
+              <div className='font-semibold py-2'>Subject</div>
+              <select className='w-11/12 rounded p-2 border border-gray-400' name="subject">
+                <option>Select</option>
+                <option value="more information">More Information</option>
+                <option value="complaint">Complaint</option>
+                <option value="Accounts">Accounts</option>
+                <option value="suggestions">Suggestions</option>
+              </select>
+              <div className='font-semibold py-2'>Message</div>
+              <textarea className='w-11/12 rounded p-2 h-36 border border-gray-400' style={{resize: 'none'}} name='message' placeholder='Type message'></textarea>
+              <button className='mt-5 w-11/12 bg-blue-600 hover:bg-blue-500 py-1 text-white rounded'>Submit</button>
+            </div>
+          </div>
+          <div className='w-1/2 py-6'>
+            <div className='font-semibold pb-5 text-xl'>
+              Address
+            </div>
+            <div className='pb-5'>
+              10 Garfield Road, <br></br>Claremont,<br></br> Cape Town, <br></br>7708
+            </div>
+            <div className='font-semibold py-5 text-xl'>
+              Contact Number
+            </div>
+            <div className='pb-5'>
+              <a href='tel:0836475159'>0836475159</a>
+            </div>
+            <div className='font-semibold py-5 text-xl'>
+              Email Address
+            </div>
+            <div>
+              <a href="mailto:garfield.preprimary@gmail.com">garfield.preprimary@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='bg-gray-100 h-96'>
+
       </div>
     </div>
   )
