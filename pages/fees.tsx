@@ -11,7 +11,7 @@ export default function Fees() {
       </Head>
 
       <Header height="h-96 2xl:h-screen" image="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243404081_256456103154955_2878214536234576043_n.jpg?stp=dst-jpg_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=iIn07Am64m8AX-FXLAG&_nc_ht=scontent-cpt1-1.xx&oh=00_AfDPUZGKMsf1y8f01HpcMGDKadQat587xiyqFTBaDKLtZg&oe=638B0B66"/>
-      <div className='text-center text-3xl pt-10 uppercase'>
+      <div className='text-center text-3xl pt-10 uppercase font-semibold'>
         School fees
       </div>
       <div className='w-full py-10 flex'>
