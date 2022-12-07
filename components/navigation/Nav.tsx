@@ -19,11 +19,11 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 const solutions = [
   {
     name: 'Application For Enrolment',
-    href: '#',
+    href: '/application_for_enrolment',
   },
   {
     name: 'Prospectus',
-    href: '#',
+    href: '/prospectus',
   },
   {
     name: 'School Fees',
@@ -33,16 +33,12 @@ const solutions = [
 const classes = [
   {
     name: 'Daily Program',
-    href: '#',
+    href: '/daily_program',
   },
   {
     name: 'Extra Mural Activities',
-    href: '#',
-  },
-  {
-    name: 'Aftercare',
-    href: '#',
-  },
+    href: '/extra_mural_activities',
+  }
 ]
 
 const callsToAction = [

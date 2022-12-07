@@ -33,7 +33,7 @@ export default function Contact() {
               </select>
               <div className='font-semibold py-2'>Message</div>
               <textarea className='w-11/12 rounded p-2 h-36 border border-gray-400' style={{resize: 'none'}} name='message' placeholder='Type message'></textarea>
-              <button className='mt-5 w-11/12 bg-blue-600 hover:bg-blue-500 py-1 text-white rounded'>Submit</button>
+              <button className='mt-5 w-11/12 bg-blue-600 hover:bg-blue-500 py-2 text-white rounded'>Submit</button>
             </div>
           </div>
           <div className='w-1/2 py-6'>
