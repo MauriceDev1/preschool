@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 import Header from '../components/header/index'
-import Application from '../assets/forms/Issue.pdf'
+
 
 export default function About() {
   return (
