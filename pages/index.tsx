@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from '../components/header/index'
 import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
 
-import Carousel from '../components/extra/carousel'
 
 const features = [
   {
@@ -146,7 +145,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <Carousel />
     </div>
   )
 }
