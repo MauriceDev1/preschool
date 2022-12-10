@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { FaFacebook } from 'react-icons/fa'
 import Header from '../components/header/index'
 
 export default function Contact() {
@@ -10,7 +11,7 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96" image="https://images.unsplash.com/photo-1609140070027-e721c67234b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"/>
+      <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-8affc0fd79f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 flex'>
         <div className='flex w-10/12 p-5 m-auto'>
           <div className='w-1/2 py-6'>

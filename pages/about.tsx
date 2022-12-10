@@ -1,5 +1,34 @@
 import Head from 'next/head'
+import { FaAngleRight } from 'react-icons/fa';
 import Header from '../components/header/index'
+
+const Offers = [
+  {
+    id: 1,
+    icon: <FaAngleRight />,
+    text: 'A comprehensive, stimulating programme for 3-5year olds from 7.45am to 12.50pm',
+  },
+  {
+    id: 2,
+    icon: <FaAngleRight />,
+    text: 'Dynamic, experienced staff',
+  },
+  {
+    id: 3,
+    icon: <FaAngleRight />,
+    text: 'An early bird service from 7.15am as well as Aftercare till 5.30pm', 
+  },
+  {
+    id: 4,
+    icon: <FaAngleRight />,
+    text: 'Affordable, competitive fees',
+  },
+  {
+    id: 5,
+    icon: <FaAngleRight />,
+    text: 'Extra mural activities (Optional)', 
+  },
+];
 
 
 export default function About() {
@@ -13,7 +42,7 @@ export default function About() {
 
       <Header height="h-96" image="https://cdn.pixabay.com/photo/2018/08/25/04/27/blocks-3629359_1280.jpg"/>
       <div className='w-full py-16'>
-        <div className='flex flex-wrap w-10/12 m-auto'>
+        <div className='flex flex-wrap w-10/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 p-5'>
                 <h2 className='font-bold pb-5 text-4xl uppercase'>About Us</h2>
                 <p className="text-lg">
@@ -21,15 +50,12 @@ export default function About() {
                   send happy ,confident ,well-balanced children into the world instilled
                   with a lifelong love of learning.
                   </p>
-                <h2 className='font-bold py-5 text-4xl'>WHAT WE OFFER</h2>
+                <h2 className='font-bold pt-16 pb-5 text-4xl'>WHAT WE OFFER</h2>
                 <ul className="text-lg">
-                  <li>A comprehensive, stimulating programme for 3-5year olds from 7.45am to 12.50pm</li>
-                  <li>Dynamic, experienced staff</li>
-                  <li>An early bird service from 7.15am as well as Aftercare till 5.30pm</li>
-                  <li>Affordable, competitive fees</li>
-                  <li>Extra mural activities (Optional)</li>
+                  {Offers.map(d => {
+                    return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
+                  })}
                 </ul>
-                ENROL YOUR CHILD TODAYI
             </div>
           <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243662352_256456099821622_6061892165152021410_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNQ0byPb__xhEm-f43QmZT4KMY5I3o_rXgoxjkjej-tZ05JOGKwSNseOfPdYYGiZcFi9OWL5JvzkmX1efNPNTx&_nc_ohc=LRhDPXCqMJsAX_W86Q7&_nc_ht=scontent-cpt1-1.xx&oh=00_AfAYep_yKtynfZ6xMul0Ox6qkHVJYyzFghNdlVeR8uYSng&oe=638EE99F)',backgroundSize:'cover'}}></div>
         </div>

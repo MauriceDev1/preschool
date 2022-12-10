@@ -50,11 +50,9 @@ export default function Footer() {
             <div className='text-white font-semibold'>
               Social Media
             </div>
-            <div className='flex w-48 py-8 text-xl text-white justify-between'>
+            <div className='flex w-24 py-8 text-xl text-white justify-between'>
               <a href='https://web.facebook.com/10onGarfield'><FaFacebook /></a>
-              <FaTwitter />
-              <FaInstagram />
-              <FaGooglePlus />
+              <a href="https://www.instagram.com/garpreprim/?hl=en"><FaInstagram /></a>
             </div>
           </div>
         </div>

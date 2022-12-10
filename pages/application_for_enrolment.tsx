@@ -12,7 +12,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96"/>
+      <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-f8657e9fc8f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10'>
         <div className='w-10/12 bg-gray-100 m-auto'>
         <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a>

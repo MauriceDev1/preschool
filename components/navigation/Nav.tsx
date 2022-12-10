@@ -317,13 +317,17 @@ export default function Nav() {
               </div> */}
             </div>
             <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div className="grid grid-cols-1 gap-y-4 gap-x-8">
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Home
                 </a>
 
                 <a href="/about" className="text-base font-medium text-gray-900 hover:text-gray-700">
                 About Us
+                </a>
+
+                <a href="/classes" className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Classes
                 </a>
 
                 <a href="/enrolment" className="text-base font-medium text-gray-500 hover:text-gray-900">
@@ -343,7 +347,7 @@ export default function Nav() {
                   </a>
                 ))} */}
               </div>
-              <div>
+              {/* <div>
                 <a
                   href="#"
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
@@ -356,7 +360,7 @@ export default function Nav() {
                     Sign in
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </Popover.Panel>
