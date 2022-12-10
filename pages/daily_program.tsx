@@ -1,18 +1,64 @@
 
 import Head from 'next/head'
+import { FaAngleRight, FaFacebook } from 'react-icons/fa';
 import Header from '../components/header/index'
 
 const Dates = [
-  '8.40a.m. - Welcome and free play ',
-'8 40a.m. - 9.10a.m. - Morning Ring ( Greeting, News, Weather and Topic Discussion)', 
-'9 10a m - 10 15a.m. - Creative Activities', 
-'10 15a.m. - 10.30a.m.- Free Play ',
-'10.30a.m - 10.50a.m. - Music or Movement or Science/Mathematics Ring', 
-'10.50a.m.- 11.15a.m.- Toilet Routine followed by Snack Time' ,
-'11 15a.m. - 11.30a.m - Free Play', 
-'11 30a.m. - 11 40a.m - Pack Away time', 
-'11 40a m - 12 - Small Group Work ( worksheets. card or board games, puzzles ',
-'12noon - 12 50pm - Story time followed by Home or Aftercare time'
+  {
+    id: 1,
+    icon: <FaAngleRight />,
+    text: '8.40a.m. - Welcome and free play ',
+  },
+  {
+    id: 2,
+    icon: <FaAngleRight />,
+    text: '8 40a.m. - 9.10a.m. - Morning Ring ( Greeting, News, Weather and Topic Discussion)',
+  },
+  {
+    id: 3,
+    icon: <FaAngleRight />,
+    text: '9 10a m - 10 15a.m. - Creative Activities', 
+  },
+  {
+    id: 4,
+    icon: <FaAngleRight />,
+    text: '10 15a.m. - 10.30a.m.- Free Play ',
+  },
+  {
+    id: 5,
+    icon: <FaAngleRight />,
+    text: '10.30a.m - 10.50a.m. - Music or Movement or Science/Mathematics Ring', 
+  },
+  {
+    id: 6,
+    icon: <FaAngleRight />,
+    text: '10.50a.m.- 11.15a.m.- Toilet Routine followed by Snack Time' ,
+  },
+  {
+    id: 7,
+    icon: <FaAngleRight />,
+    text: '11 15a.m. - 11.30a.m - Free Play', 
+  },
+  {
+    id: 8,
+    icon: <FaAngleRight />,
+    text: '11 15a.m. - 11.30a.m - Free Play', 
+  },
+  {
+    id: 9,
+    icon: <FaAngleRight />,
+    text: '11 30a.m. - 11 40a.m - Pack Away time', 
+  },
+  {
+    id: 10,
+    icon: <FaAngleRight />,
+    text: '11 40a m - 12 - Small Group Work ( worksheets. card or board games, puzzles ',
+  },
+  {
+    id: 11,
+    icon: <FaAngleRight />,
+    text: '12noon - 12 50pm - Story time followed by Home or Aftercare time'
+  }
 ];
 
 export default function About() {
@@ -26,16 +72,25 @@ export default function About() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 bg-gray-50'>
-        <div className='flex w-10/12 m-auto'>
+        <div className='flex w-10/12 m-auto text-gray-600'>
           <div className='w-1/2'>
             <h1 className='text-4xl font-bold mt-10 pb-8'>THE SCHOOL YEAR </h1>
             <p className='text-lg'>Our school follows the calendar set by the Western Cape Education Department for primary and secondary schools.</p>
+            <h1 className='text-4xl font-bold mt-10 pb-8'>OUR CLASSES </h1>
+            <p className='text-lg'>We offer a two year programme after which time the children should enter Grade R at a primary
+            school. Our Younger Group is the 3 and a half to 4 and a half year olds which has a maximum of 20
+            children. The Older Group has a maximum of 25 children and caters for the 4 and a half to 6 year
+            olds. Each group has a qualified teacher, classroom assistant as well as its own well-equipped
+            classroom with fantasy play, construction, and puzzle areas. We have two playgrounds with age
+            appropriate jungle gyms, swings, sandpits and other outdoor apparatus for the children to enjoy.</p>
             <h1 className='text-4xl font-bold py-8'>OUR DAILY PROGRAMME</h1>
             <ul>
-              {Dates.map(d => <li className='py-2 text-md'>{d}</li>)}
+              {Dates.map(d => {
+                return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
+              })}
             </ul>
           </div>
-          <div className=' mt-10 ml-16 w-[30vw] h-[60vh]' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/274173214_349194807214417_3483669650949638549_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=llF3lJ52bGYAX8qPRVW&_nc_ht=scontent-cpt1-1.xx&oh=00_AfDp0YN7JzpXOiT2srvuA239_TJQ32g2fVx8cVUAtFTdiw&oe=6393A5CC)',backgroundSize: 'cover'}}>
+          <div className=' mt-10 ml-16 w-[30vw] h-[60vh]' style={{backgroundImage: 'url(https://scontent.fcpt2-1.fna.fbcdn.net/v/t39.30808-6/308074675_504211331712763_1287502501369917939_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFuAOmesMD1Sf3J8BXMFd6BE8Vgpm5yArITxWCmbnICspNCr5DVv5TMqoEd6U0P0w36Sf1cI-XaCpluwj8ZJg_6&_nc_ohc=QVOQzHk_EggAX-i5YqX&tn=bvHnx5pHcOeEvmhk&_nc_zt=23&_nc_ht=scontent.fcpt2-1.fna&oh=00_AfB6zjzzRQN8Nu3TY9pCfsyZR5V2j3nYpHFAoy6PJA9_hQ&oe=639AA7C0)',backgroundSize: 'cover'}}>
 
           </div>
         </div>

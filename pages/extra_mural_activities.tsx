@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/header/index'
+import Extra from '../assets/docs/extra.txt'
 
 export default function About() {
   return (
@@ -10,12 +11,21 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96" image="https://images.unsplash.com/photo-1522167428-d603a1d62f26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80"/>
-      <div className='w-full py-20'>
-        |<div className='bg-gray-100'>
-
+      <Header height="h-96" image="https://images.unsplash.com/photo-1574429549871-ecf3b8523655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1960&q=80"/>
+      <div className='w-full py-16'>
+        <div className='flex flex-wrap w-10/12 m-auto'>
+          <div className='w-full sm:w-2/3 p-5 text-gray-600'>
+                <h2 className='font-bold pb-5 text-4xl uppercase'>OUR EXTRA-MURAL PROGRAMME</h2>
+                <p className="text-lg">
+                At the start of each year parents will be given the details of the Extra- Mural activities on offer for
+                the year. These are optional and take place in the hall after school hours and therefore fees are
+                payable directly to the instructor concerned.
+                  </p>
+                
+            </div>
+          <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243662352_256456099821622_6061892165152021410_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNQ0byPb__xhEm-f43QmZT4KMY5I3o_rXgoxjkjej-tZ05JOGKwSNseOfPdYYGiZcFi9OWL5JvzkmX1efNPNTx&_nc_ohc=LRhDPXCqMJsAX_W86Q7&_nc_ht=scontent-cpt1-1.xx&oh=00_AfAYep_yKtynfZ6xMul0Ox6qkHVJYyzFghNdlVeR8uYSng&oe=638EE99F)',backgroundSize:'cover'}}></div>
         </div>
-      </div>
+        </div>
     </div>
   )
 }
