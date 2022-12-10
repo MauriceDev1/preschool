@@ -14,7 +14,7 @@ export default function About() {
       <Header height="h-96" image="https://cdn.pixabay.com/photo/2018/08/25/04/27/blocks-3629359_1280.jpg"/>
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-10/12 m-auto'>
-          <div className='w-2/3 p-5'>
+          <div className='w-full sm:w-2/3 p-5'>
                 <h2 className='font-bold pb-5 text-4xl uppercase'>About Us</h2>
                 <p className="text-lg">
                   We aim to build a strong foundation in all areas of development to
@@ -31,7 +31,7 @@ export default function About() {
                 </ul>
                 ENROL YOUR CHILD TODAYI
             </div>
-          <div className='w-1/3 bg-blue-100 rounded shadow' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243662352_256456099821622_6061892165152021410_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNQ0byPb__xhEm-f43QmZT4KMY5I3o_rXgoxjkjej-tZ05JOGKwSNseOfPdYYGiZcFi9OWL5JvzkmX1efNPNTx&_nc_ohc=LRhDPXCqMJsAX_W86Q7&_nc_ht=scontent-cpt1-1.xx&oh=00_AfAYep_yKtynfZ6xMul0Ox6qkHVJYyzFghNdlVeR8uYSng&oe=638EE99F)',backgroundSize:'cover'}}></div>
+          <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243662352_256456099821622_6061892165152021410_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNQ0byPb__xhEm-f43QmZT4KMY5I3o_rXgoxjkjej-tZ05JOGKwSNseOfPdYYGiZcFi9OWL5JvzkmX1efNPNTx&_nc_ohc=LRhDPXCqMJsAX_W86Q7&_nc_ht=scontent-cpt1-1.xx&oh=00_AfAYep_yKtynfZ6xMul0Ox6qkHVJYyzFghNdlVeR8uYSng&oe=638EE99F)',backgroundSize:'cover'}}></div>
         </div>
         </div>
     </div>

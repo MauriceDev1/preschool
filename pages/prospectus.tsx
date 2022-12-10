@@ -11,10 +11,10 @@ export default function Prospectus() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96" image="https://cdn.pixabay.com/photo/2018/08/25/04/27/blocks-3629359_1280.jpg"/>
+      <Header height="h-96" image="https://images.unsplash.com/photo-1601339434203-130259102db6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-10/12 m-auto'>
-          <div className='w-2/3 p-5'>
+          <div className='w-full sm:w-2/3 p-5'>
                 <h2 className='font-bold pb-5 text-4xl uppercase'>Prospectus</h2>
                 <p className="text-lg">
                   We aim to build a strong foundation in all areas of development to
@@ -31,7 +31,7 @@ export default function Prospectus() {
                 </ul>
                 ENROL YOUR CHILD TODAYI
             </div>
-          <div className='w-1/3 bg-blue-100 rounded shadow' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/306602591_496303885836841_4417422731782536676_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPqXoIcvp1cAX_I9quI&_nc_ht=scontent-cpt1-1.xx&oh=00_AfB5l_o74y_5XYzZgBrsNeHxlUzQSpKGc6naRcAw-nH6vg&oe=639116CA)',backgroundSize:'cover'}}></div>
+          <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/306602591_496303885836841_4417422731782536676_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPqXoIcvp1cAX_I9quI&_nc_ht=scontent-cpt1-1.xx&oh=00_AfB5l_o74y_5XYzZgBrsNeHxlUzQSpKGc6naRcAw-nH6vg&oe=639116CA)',backgroundSize:'cover'}}></div>
         </div>
         </div>
     </div>

@@ -10,9 +10,11 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96"/>
-      <div>
-        Extra Mural Activities
+      <Header height="h-96" image="https://images.unsplash.com/photo-1522167428-d603a1d62f26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80"/>
+      <div className='w-full py-20'>
+        |<div className='bg-gray-100'>
+
+        </div>
       </div>
     </div>
   )
