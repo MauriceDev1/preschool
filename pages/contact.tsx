@@ -13,8 +13,8 @@ export default function Contact() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-8affc0fd79f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 flex'>
-        <div className='flex w-10/12 p-5 m-auto'>
-          <div className='w-1/2 py-6'>
+        <div className='flex flex-wrap w-10/12 p-5 m-auto'>
+          <div className='w-full sm:w-1/2 py-6'>
             <div>
               <div className='font-semibold pb-2'>Name</div>
               <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="name" />
@@ -37,7 +37,7 @@ export default function Contact() {
               <button className='mt-5 w-11/12 bg-blue-600 hover:bg-blue-500 py-2 text-white rounded'>Submit</button>
             </div>
           </div>
-          <div className='w-1/2 py-6'>
+          <div className='w-full sm:w-1/2 py-6'>
             <div className='font-semibold pb-5 text-xl'>
               Address
             </div>
