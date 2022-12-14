@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Header from '../components/header/index'
 import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
 import { FaAngleRight } from 'react-icons/fa'
+import Image from 'next/image'
+import Gar from '../assets/garfieldOuting.jpg'
 
 const Missions = [
   {
@@ -17,7 +19,7 @@ const Missions = [
   {
     id: 3,
     icon: <FaAngleRight />,
-    text: 'o foster a lifelong love of learning',
+    text: 'To foster a lifelong love of learning',
   },
 ]
 
@@ -31,20 +33,20 @@ export default function Home() {
       </Head>
 
       <Header 
-        height="h-96 sm:h-[70vh]"
+        height="h-[55vh] xl:h-[71vh]"
         image="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
         <div className="bg-gray-50">
-          <div className='bg-gradient-to-r from-red-400 to-red-500'>
-            <div className="mx-auto shadow-b max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-8 lg:px-8">
+          <div className='border-2 shadow-xl border-red-500 bg-gradient-to-r from-red-400 to-red-500'>
+            <div className="mx-auto shadow-b max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-5 lg:px-8">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 <span className="block text-white">Welcome to Garfield</span>
-                <span className="block text-red-600">Ready to register?</span>
+                <span className="block text-gray-600">Ready to register?</span>
               </h2>
               <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                 <div className="inline-flex rounded-md shadow">
                   <a
                     href="/application_for_enrolment"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-5 py-3 text-base font-medium text-white hover:bg-yellow-600"
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-5 py-3 text-base font-medium text-white hover:bg-yellow-300"
                   >
                     Apply
                   </a>
@@ -52,7 +54,7 @@ export default function Home() {
                 <div className="ml-3 inline-flex rounded-md shadow">
                   <a
                     href="/about"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-red-500 px-5 py-3 text-base font-medium text-white hover:bg-red-600 "
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-white hover:bg-gray-700 "
                   >
                     Get More Info
                   </a>
@@ -62,7 +64,7 @@ export default function Home() {
           </div>
       <div className="w-full flex pt-16 pb-32">
         <div className='w-10/12 m-auto text-gray-600'>
-        <div className='w-full text-center text-4xl pb-10 font-bold'>OUR SCHOOL HISTORY</div> 
+        <div className='w-full text-center text-6xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR SCHOOL HISTORY</div> 
         <p className='text-lg'>In a response to a request from residents, Christ the King Church opened a private pre- primary school in October 1969. There were initially 34 children and the Church provided the premises, equipment and funds to initiate the school. 
         In 1970 the school was registered with the Western Cape Education Department. Soon after a formal constitution for the school was drawn up as well as a lease agreement between the Management Committee and the Church authorities. 
         Today the school is registered with the WCED as a co-educational independent school. The seventh principal of the school, Mrs. Cathy Chandler joined the school in 1986.</p> 
@@ -72,18 +74,18 @@ export default function Home() {
     <div className='w-full flex bg-gray-50'>
       <div className='flex flex-wrap w-10/12 m-auto'>
         <div className='w-full sm:w-3/6 text-gray-600'>
-        <div className='w-full text-4xl pb-5 font-bold'>OUR MISSION STATEMENT</div>
+        <div className='w-full text-5xl pb-5 font-bold text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR MISSION STATEMENT</div>
         <div className='w-full'>
           <div className='w-full text-2xl pb-7 font-bold'>WE AIM:</div>
-          <ul>
-            {Missions.map(d => {
-                return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
-            })}
-          </ul>
+            <ul>
+              {Missions.map(d => {
+                  return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
+              })}
+            </ul>
+          </div>
         </div>
-        </div>
-        <div className='w-full sm:w-3/6 h-[65vh]' style={{backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/04/01/08/33/boy-1298788__480.png)',backgroundPositionX: '-200px'}}>
-
+        <div className='sm:ml-20 sm:w-1/3' style={{zIndex:'1'}}>
+          <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
         </div>
       </div>
     </div>

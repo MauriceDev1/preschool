@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Ultra";
+    src: url("../public/LuckiestGuy-Regular.ttf");
+  }

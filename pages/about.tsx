@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { FaAngleRight } from 'react-icons/fa';
-import Header from '../components/header/index'
+import Header from '../components/header/index';
+import Gar from '../assets/garfieldOuting.jpg'
+import Image from 'next/image';
 
 const Offers = [
   {
@@ -44,20 +46,23 @@ export default function About() {
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-10/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 p-5'>
-                <h2 className='font-bold pb-5 text-4xl uppercase'>About Us</h2>
+                <h2 className='font-bold pb-5 text-6xl uppercase text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>About Us</h2>
                 <p className="text-lg">
                   We aim to build a strong foundation in all areas of development to
                   send happy ,confident ,well-balanced children into the world instilled
                   with a lifelong love of learning.
                   </p>
-                <h2 className='font-bold pt-16 pb-5 text-4xl'>WHAT WE OFFER</h2>
+                <h2 className='font-bold pt-16 pb-5 text-5xl text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>WHAT WE OFFER</h2>
                 <ul className="text-lg">
                   {Offers.map(d => {
                     return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
                   })}
                 </ul>
             </div>
-          <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243662352_256456099821622_6061892165152021410_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFNQ0byPb__xhEm-f43QmZT4KMY5I3o_rXgoxjkjej-tZ05JOGKwSNseOfPdYYGiZcFi9OWL5JvzkmX1efNPNTx&_nc_ohc=LRhDPXCqMJsAX_W86Q7&_nc_ht=scontent-cpt1-1.xx&oh=00_AfAYep_yKtynfZ6xMul0Ox6qkHVJYyzFghNdlVeR8uYSng&oe=638EE99F)',backgroundSize:'cover'}}></div>
+          <div 
+            className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{zIndex:'-1'}}>
+            <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/>
+          </div>
         </div>
         </div>
     </div>

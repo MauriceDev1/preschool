@@ -14,13 +14,13 @@ export default function About() {
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-10/12 m-auto'>
           <div className='w-full sm:w-2/3 p-5 text-gray-600'>
-            <h2 className='font-bold pb-5 text-4xl uppercase'>OUR EXTRA-MURAL PROGRAMME</h2>
+            <h2 className='font-bold pb-5 text-6xl text-red-600 uppercase' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR EXTRA-MURAL PROGRAMME</h2>
             <p className="text-lg">
               At the start of each year parents will be given the details of the Extra- Mural activities on offer for
               the year. These are optional and take place in the hall after school hours and therefore fees are
               payable directly to the instructor concerned.
               </p>
-              <h2 className='font-bold pb-5 text-4xl uppercase mt-16'>OUR AFTERCARE FACILITY</h2>
+              <h2 className='font-bold pb-5 text-5xl text-yellow-500 uppercase mt-16' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR AFTERCARE FACILITY</h2>
             <p className="text-lg">
               We offer an Aftercare Service from 12.30 -5.30p.m weekdays. For those children who pay the full
               Aftercare fees, this includes school holidays when the Aftercare operates from 7.30a.m. - 5.30p-m

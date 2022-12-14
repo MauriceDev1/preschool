@@ -15,7 +15,7 @@ export default function Fees() {
       <div className='w-full py-10 flex text-gray-600'>
         <div className='flex flex-wrap w-10/12 mx-auto'>
             <div className='flex flex-wrap w-full sm:w-7/12 m-auto'>
-            <h1 className='text-4xl font-bold m-auto py-10'>SCHOOL FEES</h1>
+            <h1 className='text-6xl text-red-600 font-bold m-auto py-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>SCHOOL FEES</h1>
             <p className='text-lg px-5'>
               An annual school fee per child is set, but this can be paid annually, 
               quarterly or monthly ( over 10 months from February to November) . 

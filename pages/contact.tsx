@@ -1,8 +1,29 @@
+import React, { useState } from 'react'
 import Head from 'next/head'
-import { FaFacebook } from 'react-icons/fa'
 import Header from '../components/header/index'
 
 export default function Contact() {
+  const [formData, setFormData ] = useState({
+    name: '',
+    surname: '',
+    mobile: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [ error, setError ] = useState()
+
+  const changeFormData = (e: any) => {
+    setFormData((formData) => ({...formData,[e.target.name]:e.target.value}))
+  }
+
+  const submitForm = () => {
+    if(formData.name === ''){
+      alert('Please Enter name')
+    }
+    alert(JSON.stringify(formData))
+  }
+
   return (
     <div>
       <Head>
@@ -12,55 +33,58 @@ export default function Contact() {
       </Head>
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-8affc0fd79f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
-      <div className='w-full py-10 flex'>
+      <div className='text-center text-6xl text-red-600 font-bold pt-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
+        CONTACT US
+      </div>
+      <div className='w-full pb-10 flex'>
         <div className='flex flex-wrap w-10/12 p-5 m-auto'>
           <div className='w-full sm:w-1/2 py-6'>
-            <div>
-              <div className='font-semibold pb-2'>Name</div>
-              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="name" />
-              <div className='font-semibold py-2'>Surname</div>
-              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="surname" />
-              <div className='font-semibold py-2'>Mobile</div>
-              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="mobile" />
-              <div className='font-semibold py-2'>Email</div>
-              <input className='w-11/12 rounded p-2 border border-gray-400' type="text" name="email" />
-              <div className='font-semibold py-2'>Subject</div>
-              <select className='w-11/12 rounded p-2 border border-gray-400' name="subject">
+            <div className='text-gray-600'>
+              <div className='pb-2'>Name</div>
+              <input className='w-11/12 rounded p-2 border' name="name" onChange={(e) => changeFormData(e)} type="text" />
+              <div className='py-2'>Surname</div>
+              <input className='w-11/12 rounded p-2 border' name="surname" onChange={(e) => changeFormData(e)} type="text" />
+              <div className='py-2'>Mobile</div>
+              <input className='w-11/12 rounded p-2 border' name="mobile" onChange={(e) => changeFormData(e)} type="text" />
+              <div className='py-2'>Email</div>
+              <input className='w-11/12 rounded p-2 border' name="email" onChange={(e) => changeFormData(e)} type="text" />
+              <div className='py-2'>Subject</div>
+              <select className='w-11/12 rounded p-2 border' name="subject" onChange={(e) => changeFormData(e)}>
                 <option>Select</option>
                 <option value="more information">More Information</option>
                 <option value="complaint">Complaint</option>
                 <option value="Accounts">Accounts</option>
                 <option value="suggestions">Suggestions</option>
               </select>
-              <div className='font-semibold py-2'>Message</div>
-              <textarea className='w-11/12 rounded p-2 h-36 border border-gray-400' style={{resize: 'none'}} name='message' placeholder='Type message'></textarea>
-              <button className='mt-5 w-11/12 bg-blue-600 hover:bg-blue-500 py-2 text-white rounded'>Submit</button>
+              <div className='py-2'>Message</div>
+              <textarea className='w-11/12 rounded p-2 h-36 border' name="message" onChange={(e) => changeFormData(e)}  style={{resize: 'none'}}  placeholder='Type message'></textarea>
+              <button onClick={submitForm} className='mt-5 w-11/12 bg-yellow-500 hover:bg-yellow-600 py-2 text-white rounded'>Submit</button>
             </div>
           </div>
           <div className='w-full sm:w-1/2 py-6'>
-            <div className='font-semibold pb-5 text-xl'>
+            <div className='font-semibold pb-5 text-2xl text-yellow-500'style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
               Address
             </div>
-            <div className='pb-5'>
+            <div className='pb-5 text-xl'>
               10 Garfield Road, <br></br>Claremont,<br></br> Cape Town, <br></br>7708
             </div>
-            <div className='font-semibold py-5 text-xl'>
+            <div className='font-semibold py-5 text-2xl text-red-600'style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
               Contact Number
             </div>
-            <div className='pb-5'>
+            <div className='pb-5 text-xl'>
               <a href='tel:0836475159'>0836475159</a>
             </div>
-            <div className='font-semibold py-5 text-xl'>
+            <div className='font-semibold py-5 text-2xl text-yellow-500'style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
               Email Address
             </div>
-            <div>
+            <div className='text-xl text-blue-500'>
               <a href="mailto:garfield.preprimary@gmail.com">garfield.preprimary@gmail.com</a>
+            </div>
+            <div className='bg-gray-100 h-56 mt-8'>
+
             </div>
           </div>
         </div>
-      </div>
-      <div className='bg-gray-100 h-96'>
-
       </div>
     </div>
   )

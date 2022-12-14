@@ -14,27 +14,27 @@ export default function Prospectus() {
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-10/12 m-auto'>
           <div className='w-full sm:w-2/3 p-5 text-gray-600'>
-              <h2 className='font-bold pb-5 text-4xl uppercase'>Prospectus</h2>
+              <h2 className='font-bold pb-5 text-6xl text-red-600 uppercase' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>Prospectus</h2>
               <p className="text-lg">
                 We aim to build a strong foundation in all areas of development to
-                send happy ,confident ,well-balanced children into the world instilled
+                send happy, confident, well-balanced children into the world instilled
                 with a lifelong love of learning.
               </p>
               <p className="text-lg pt-3">
                 The school&#39;s constitution gives parents a role in the management of the school, whilst ensuring the
                 school remains under the control of the Parish Council of Christ the King Church The school is
                 managed by a Governing Body which is responsible to the Trustees of the Church Province of South
-                Africa for the proper conduct of its affairs. This body is represented by the Rector, Churchwardens
-                and Pans!, Councillors as well as the Principal, the teacher and members the parent body. It is
-                empowered to make rules. Set policies adjust fees, control school finances, select teachers for
-                appointment and engage non- teaching staff. To conduct it business. This committee meets at least
-                once a term. The day- to day operation of the school is the responsibility of the Principal who
+                Africa for the proper conduct of its affairs. <br></br><br></br>This body is represented by the Rector, Churchwardens
+                and Parish Councillors as well as the Principal, the teacher and members of the parent body. It is
+                empowered to make rules, set policies adjust fees, control school finances, select teachers for
+                appointment and engage non- teaching staff to conduct its business. <br></br><br></br>This committee meets at least
+                once a term. The day-to-day operation of the school is the responsibility of the Principal who
                 manages the staff, plans school activities, oversees the Aftercare, controls the use of school
                 equipment. and ensures that the children receive proper attention and supervision while at school
                 or Aftercare.
               </p>
             </div>
-          <div className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/306602591_496303885836841_4417422731782536676_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPqXoIcvp1cAX_I9quI&_nc_ht=scontent-cpt1-1.xx&oh=00_AfB5l_o74y_5XYzZgBrsNeHxlUzQSpKGc6naRcAw-nH6vg&oe=639116CA)',backgroundSize:'cover'}}></div>
+          <div className='w-full sm:w-1/3 bg-blue-100 shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/306602591_496303885836841_4417422731782536676_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPqXoIcvp1cAX_I9quI&_nc_ht=scontent-cpt1-1.xx&oh=00_AfB5l_o74y_5XYzZgBrsNeHxlUzQSpKGc6naRcAw-nH6vg&oe=639116CA)',backgroundSize:'cover'}}></div>
         </div>
         </div>
     </div>
