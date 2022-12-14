@@ -122,7 +122,6 @@ export default function Nav() {
                             <a
                               key={item.name}
                               className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
-                              onClick={() => close(open)}
                             >
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
