@@ -37,7 +37,7 @@ export default function Contact() {
         CONTACT US
       </div>
       <div className='w-full pb-10 flex'>
-        <div className='flex flex-wrap w-10/12 p-5 m-auto'>
+        <div className='flex flex-wrap w-11/12 sm:w-9/12 p-5 m-auto'>
           <div className='w-full sm:w-1/2 py-6'>
             <div className='text-gray-600'>
               <div className='pb-2'>Name</div>

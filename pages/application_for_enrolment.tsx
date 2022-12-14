@@ -37,7 +37,7 @@ export default function About() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-f8657e9fc8f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 bg-gray-50'>
-        <div className='w-10/12 m-auto text-gray-600'>
+        <div className='w-9/12 m-auto text-gray-600'>
           <div className='text-center text-6xl text-red-600 font-bold pb-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
             APLICATION FORM
           </div>

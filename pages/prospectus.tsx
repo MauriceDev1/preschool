@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Header from '../components/header/index'
+import Gar from '../assets/garfieldOuting.jpg'
 
 export default function Prospectus() {
   return (
@@ -12,7 +14,7 @@ export default function Prospectus() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1601339434203-130259102db6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
       <div className='w-full py-16'>
-        <div className='flex flex-wrap w-10/12 m-auto'>
+        <div className='flex flex-wrap w-11/12 sm:w-9/12 m-auto'>
           <div className='w-full sm:w-2/3 p-5 text-gray-600'>
               <h2 className='font-bold pb-5 text-6xl text-red-600 uppercase' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>Prospectus</h2>
               <p className="text-lg">
@@ -34,8 +36,10 @@ export default function Prospectus() {
                 or Aftercare.
               </p>
             </div>
-          <div className='w-full sm:w-1/3 bg-blue-100 shadow h-96' style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/306602591_496303885836841_4417422731782536676_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=TPqXoIcvp1cAX_I9quI&_nc_ht=scontent-cpt1-1.xx&oh=00_AfB5l_o74y_5XYzZgBrsNeHxlUzQSpKGc6naRcAw-nH6vg&oe=639116CA)',backgroundSize:'cover'}}></div>
-        </div>
+            <div className='sm:w-1/3 sm:pt-28' style={{zIndex:'1'}}>
+              <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
+            </div>
+          </div>
         </div>
     </div>
   )

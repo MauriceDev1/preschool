@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import React, { useState } from 'react'
 import { FaFacebook, FaGooglePlus, FaInstagram, FaTwitter } from 'react-icons/fa'
+import CompanyLogo from '../../assets/Garfield_logo.png'
 
 const Site = [
   {
@@ -63,7 +65,13 @@ export default function Footer() {
       <div className='flex w-full py-20 bg-gradient-to-r from-red-400 to-red-500'>
           <div className='w-11/12 sm:w-8/12 m-auto flex flex-wrap'>
             <div className='w-full sm:w-1/4 text-center'>
-              <div className='text-white font-semibold'>
+              <div className='text-white font-semibold text-sm'>
+                <div className='w-48 sm:w-[12vw] m-auto flex pb-3'>
+                  <Image 
+                    src={CompanyLogo}
+                    objectFit={'cover'}
+                    alt="Company logo"/>
+                </div>
                 Garfiled Primary (PTY) Ltd
                 
               </div>

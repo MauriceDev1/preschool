@@ -44,7 +44,7 @@ export default function About() {
 
       <Header height="h-96" image="https://cdn.pixabay.com/photo/2018/08/25/04/27/blocks-3629359_1280.jpg"/>
       <div className='w-full py-16'>
-        <div className='flex flex-wrap w-10/12 m-auto text-gray-600'>
+        <div className='flex flex-wrap w-9/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 p-5'>
                 <h2 className='font-bold pb-5 text-6xl uppercase text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>About Us</h2>
                 <p className="text-lg">
@@ -60,7 +60,7 @@ export default function About() {
                 </ul>
             </div>
           <div 
-            className='w-full sm:w-1/3 bg-blue-100 rounded shadow h-96' style={{zIndex:'-1'}}>
+            className='w-full sm:w-1/3 rounded mt-24' style={{zIndex:'-1'}}>
             <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/>
           </div>
         </div>

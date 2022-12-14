@@ -1,7 +1,9 @@
 
 import Head from 'next/head'
+import Image from 'next/image';
 import { FaAngleRight, FaFacebook } from 'react-icons/fa';
 import Header from '../components/header/index'
+import Gar from '../assets/garfieldOuting.jpg'
 
 const Dates = [
   {
@@ -72,8 +74,8 @@ export default function About() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 bg-gray-50'>
-        <div className='flex flex-wrap w-10/12 m-auto text-gray-600'>
-          <div className='w-full sm:w-1/2'>
+        <div className='flex flex-wrap w--11/12 sm:w-9/12 m-auto text-gray-600'>
+          <div className='w-full sm:w-2/3 sm:pr-8'>
             <h1 className='text-6xl text-red-600 font-bold mt-10 pb-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>THE SCHOOL YEAR </h1>
             <p className='text-lg'>Our school follows the calendar set by the Western Cape Education Department for primary and secondary schools.</p>
             <h1 className='text-5xl font-bold mt-10 pb-8 text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR CLASSES </h1>
@@ -91,12 +93,12 @@ export default function About() {
             <h1 className='text-5xl font-bold text-yellow-500 py-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR DAILY PROGRAMME</h1>
             <ul>
               {Dates.map(d => {
-                return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
+                return <li className='flex py-3 text-md items-center text-lg' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>
               })}
             </ul>
           </div>
-          <div className='w-full mt-10 ml-10 sm:w-[38vw] h-72 sm:h-[50vh]' style={{backgroundImage: 'url(https://scontent.fcpt2-1.fna.fbcdn.net/v/t39.30808-6/308074675_504211331712763_1287502501369917939_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeFuAOmesMD1Sf3J8BXMFd6BE8Vgpm5yArITxWCmbnICspNCr5DVv5TMqoEd6U0P0w36Sf1cI-XaCpluwj8ZJg_6&_nc_ohc=QVOQzHk_EggAX-i5YqX&tn=bvHnx5pHcOeEvmhk&_nc_zt=23&_nc_ht=scontent.fcpt2-1.fna&oh=00_AfB6zjzzRQN8Nu3TY9pCfsyZR5V2j3nYpHFAoy6PJA9_hQ&oe=639AA7C0)',backgroundSize: 'cover'}}>
-
+          <div className='sm:w-1/3 pb-5 sm:mt-28' style={{zIndex:'1'}}>
+            <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
           </div>
         </div>
       </div>

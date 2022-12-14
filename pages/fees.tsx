@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/header/index'
+import Gar from '../assets/garfieldOuting.jpg'
 
 export default function Fees() {
   return (
@@ -13,7 +15,7 @@ export default function Fees() {
 
       <Header height="h-96 2xl:h-screen" image="https://cdn.pixabay.com/photo/2018/07/08/08/45/abc-3523453_1280.jpg"/>
       <div className='w-full py-10 flex text-gray-600'>
-        <div className='flex flex-wrap w-10/12 mx-auto'>
+        <div className='flex flex-wrap w-11/12 sm:w-9/12 mx-auto'>
             <div className='flex flex-wrap w-full sm:w-7/12 m-auto'>
             <h1 className='text-6xl text-red-600 font-bold m-auto py-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>SCHOOL FEES</h1>
             <p className='text-lg px-5'>
@@ -56,7 +58,8 @@ export default function Fees() {
               </Link>
             </div>
             </div>
-            <div className="w-full sm:w-5/12 h-96 mt-12" style={{backgroundImage: 'url(https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/243404081_256456103154955_2878214536234576043_n.jpg?stp=dst-jpg_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=iIn07Am64m8AX-FXLAG&_nc_ht=scontent-cpt1-1.xx&oh=00_AfDPUZGKMsf1y8f01HpcMGDKadQat587xiyqFTBaDKLtZg&oe=638B0B66)', backgroundSize: 'cover'}}>
+            <div className='sm:w-1/3 pt-36' style={{zIndex:'1'}}>
+              <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
             </div>
         </div>
       </div>
