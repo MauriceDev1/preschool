@@ -31,7 +31,7 @@ export default function About() {
               closed for 4 weeks as from about 16th December each year.
               </p> 
             </div>
-            <div className='sm:w-1/3 pb-5 mt-36' style={{zIndex:'1'}}>
+            <div className='sm:w-1/3 pb-5 sm:mt-36' style={{zIndex:'1'}}>
               <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
             </div>
         </div>
