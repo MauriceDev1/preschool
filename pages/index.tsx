@@ -3,7 +3,8 @@ import Header from '../components/header/index'
 import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
 import { FaAngleRight } from 'react-icons/fa'
 import Image from 'next/image'
-import Gar from '../assets/garfieldOuting.jpg'
+import Gar from '../assets/gir&boy.png'
+import Carousel from '../components/carousel/Carousel'
 
 const Missions = [
   {
@@ -34,7 +35,7 @@ export default function Home() {
 
       <Header 
         height="h-[55vh] xl:h-[71vh]"
-        image="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
+        image="https://cdn.pixabay.com/photo/2020/04/09/08/06/kid-5020226_1280.jpg"/>
         <div className="bg-gray-50">
           <div className='border-2 shadow-xl border-red-500 bg-gradient-to-r from-red-400 to-red-500'>
             <div className="mx-auto shadow-b max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-5 lg:px-8">
@@ -84,17 +85,15 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className='sm:w-1/3 pb-5' style={{zIndex:'1'}}>
+        <div className='sm:w-1/3 pb-5 mt-8 sm:mt-0' style={{zIndex:'1'}}>
           <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
         </div>
       </div>
     </div>
-    <div className="w-full flex bg-gray-50 pt-16 pb-32">
+    <div className="w-full flex bg-gray-50 pt-16 pb-28">
       <div className='w-9/12 m-auto text-gray-600'>
-        <div className='w-full text-center text-6xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR FRIENDLY STAFF</div> 
-          <p className='text-lg'>In a response to a request from residents, Christ the King Church opened a private pre- primary school in October 1969. There were initially 34 children and the Church provided the premises, equipment and funds to initiate the school. 
-          In 1970 the school was registered with the Western Cape Education Department. Soon after a formal constitution for the school was drawn up as well as a lease agreement between the Management Committee and the Church authorities. 
-          Today the school is registered with the WCED as a co-educational independent school. The seventh principal of the school, Mrs. Cathy Chandler joined the school in 1986.</p> 
+        <div className='w-full text-center text-5xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR FRIENDLY STAFF</div> 
+          <Carousel />
         </div>
       </div>
     </div>

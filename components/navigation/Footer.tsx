@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { FaFacebook, FaGooglePlus, FaInstagram, FaTwitter } from 'react-icons/fa'
 import CompanyLogo from '../../assets/Garfield_logo.png'
@@ -80,7 +81,7 @@ export default function Footer() {
                 Site Map
                 <ul className='mt-3 font-normal sm:ml-16 sm:text-start'>
                   {Site.map(s => {
-                    return <li className="py-3 sm:py-1"><a href={s.link} key={s.id}>{s.name}</a></li>
+                    return <li className="py-3 sm:py-1" key={s.id}><Link href={s.link}>{s.name}</Link></li>
                   })}
                 </ul>
               </div>
@@ -90,7 +91,7 @@ export default function Footer() {
                 More
                 <ul className='mt-3 sm:ml-16 font-normal sm:ml-16 sm:text-start'>
                   {More.map(m => {
-                    return <li className="py-3 sm:py-1"><a href={m.link} key={m.id}>{m.name}</a></li>
+                    return <li className="py-3 sm:py-1" key={m.id}><Link href={m.link}>{m.name}</Link></li>
                   })}
                 </ul>
               </div>

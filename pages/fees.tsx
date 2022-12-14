@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../components/header/index'
-import Gar from '../assets/garfieldOuting.jpg'
+import Gar from '../assets/eduwis-preschool.gif'
 
 export default function Fees() {
   return (
@@ -58,7 +58,7 @@ export default function Fees() {
               </Link>
             </div>
             </div>
-            <div className='sm:w-1/3 pt-36' style={{zIndex:'1'}}>
+            <div className='sm:w-1/3 sm:pt-36' style={{zIndex:'1'}}>
               <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
             </div>
         </div>

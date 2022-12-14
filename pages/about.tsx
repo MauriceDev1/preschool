@@ -42,7 +42,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header height="h-96" image="https://cdn.pixabay.com/photo/2018/08/25/04/27/blocks-3629359_1280.jpg"/>
+      <Header height="h-96" image="https://images.unsplash.com/photo-1564429238817-393bd4286b2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"/>
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-9/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 p-5'>

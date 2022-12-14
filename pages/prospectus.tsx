@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header/index'
-import Gar from '../assets/garfieldOuting.jpg'
+import Gar from '../assets/school.jpg'
 
 export default function Prospectus() {
   return (
