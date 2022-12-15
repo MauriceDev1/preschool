@@ -74,23 +74,23 @@ export default function About() {
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
       <div className='w-full py-10 bg-gray-50'>
-        <div className='flex flex-wrap w--11/12 sm:w-9/12 m-auto text-gray-600'>
+        <div className='flex flex-wrap w-11/12 sm:w-9/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 sm:pr-8'>
-            <h1 className='text-6xl text-red-600 font-bold mt-10 pb-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>THE SCHOOL YEAR </h1>
+            <h1 className='text-5xl sm:text-6xl text-red-600 font-bold mt-10 pb-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>THE SCHOOL YEAR </h1>
             <p className='text-lg'>Our school follows the calendar set by the Western Cape Education Department for primary and secondary schools.</p>
-            <h1 className='text-5xl font-bold mt-10 pb-8 text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR CLASSES </h1>
+            <h1 className='text-4xl sm:text-5xl font-bold mt-10 pb-8 text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR CLASSES </h1>
             <p className='text-lg'>We offer a two year programme after which time the children should enter Grade R at a primary
               school. Our Younger Group is the 3 and a half to 4 and a half year olds which has a maximum of 20
               children. The Older Group has a maximum of 25 children and caters for the 4 and a half to 6 year
               olds. Each group has a qualified teacher, classroom assistant as well as its own well-equipped
               classroom with fantasy play, construction, and puzzle areas. We have two playgrounds with age
               appropriate jungle gyms, swings, sandpits and other outdoor apparatus for the children to enjoy.</p>
-            <h1 className='text-5xl font-bold text-red-600 mt-10 pb-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR LEARNING PROGRAMME</h1>
+            <h1 className='text-4xl sm:text-5xl font-bold text-red-600 mt-10 pb-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR LEARNING PROGRAMME</h1>
             <p className='text-lg'>Our curriculum which is based on the National Framework for Early Learning as set out by the
               Education Department (NELDS and CAPS) is designed to give every child the opportunity to develop
               all the skills, perceptual abilities and concepts that will prepare him/her for future schooling. Written
               progress reports are given to parents three times a year.</p>
-            <h1 className='text-5xl font-bold text-yellow-500 py-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR DAILY PROGRAMME</h1>
+            <h1 className='text-4xl sm:text-5xl font-bold text-yellow-500 py-8' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR DAILY PROGRAMME</h1>
             <ul>
               {Dates.map(d => {
                 return <li className='flex py-3 text-md items-center text-lg' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { FaAngleRight } from 'react-icons/fa';
 import Header from '../components/header/index';
-import Gar from '../assets/garfieldOuting.jpg'
+import Gar from '../assets/cathy.jpeg'
 import Image from 'next/image';
 
 const Offers = [

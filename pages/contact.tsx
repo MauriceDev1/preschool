@@ -33,7 +33,7 @@ export default function Contact() {
       </Head>
 
       <Header height="h-96" image="https://images.unsplash.com/photo-1555448049-8affc0fd79f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"/>
-      <div className='text-center text-6xl text-red-600 font-bold pt-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
+      <div className='text-center text-4xl sm:text-6xl text-red-600 font-bold pt-10' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>
         CONTACT US
       </div>
       <div className='w-full pb-10 flex'>

@@ -5,6 +5,7 @@ import { FaAngleRight } from 'react-icons/fa'
 import Image from 'next/image'
 import Gar from '../assets/gir&boy.png'
 import Carousel from '../components/carousel/Carousel'
+import TestimonialCarousel from '../components/carousel/TestimonialCarousel'
 
 const Missions = [
   {
@@ -65,7 +66,7 @@ export default function Home() {
           </div>
       <div className="w-full flex pt-16 pb-32">
         <div className='w-9/12 m-auto text-gray-600'>
-          <div className='w-full text-center text-6xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR SCHOOL HISTORY</div> 
+          <div className='w-full text-center text-4xl sm:text-6xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR SCHOOL HISTORY</div> 
             <p className='text-lg'>In a response to a request from residents, Christ the King Church opened a private pre- primary school in October 1969. There were initially 34 children and the Church provided the premises, equipment and funds to initiate the school. 
             In 1970 the school was registered with the Western Cape Education Department. Soon after a formal constitution for the school was drawn up as well as a lease agreement between the Management Committee and the Church authorities. 
             Today the school is registered with the WCED as a co-educational independent school. The seventh principal of the school, Mrs. Cathy Chandler joined the school in 1986.</p> 
@@ -75,7 +76,7 @@ export default function Home() {
     <div className='w-full flex bg-gray-50'>
       <div className='flex flex-wrap w-9/12 m-auto'>
         <div className='w-full sm:w-2/3 text-gray-600'>
-        <div className='w-full text-5xl pb-5 font-bold text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR MISSION STATEMENT</div>
+        <div className='w-full text-4xl sm:text-5xl pb-5 font-bold text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR MISSION STATEMENT</div>
         <div className='w-full'>
           <div className='w-full text-2xl pb-7 font-bold'>WE AIM:</div>
             <ul>
@@ -90,12 +91,19 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <div className="w-full flex bg-gray-50 pt-16 pb-28">
-      <div className='w-9/12 m-auto text-gray-600'>
-        <div className='w-full text-center text-5xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR FRIENDLY STAFF</div> 
-          <Carousel />
-        </div>
-      </div>
+        <div className="w-full bg-gray-50 pt-16 pb-12">
+          <div className='w-9/12 m-auto text-gray-600'>
+            <div className='w-full text-center  text-4xl sm:text-5xl pb-10 font-bold text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>OUR FRIENDLY STAFF</div> 
+              <Carousel />
+            </div>
+          </div>
+        <div className="w-full bg-gray-50 pt-8 pb-10 sm:pb-5">
+          <div className='w-full sm:w-9/12 m-auto text-gray-600'>
+            <div className='w-full text-center  text-4xl sm:text-5xl pb-10 font-bold text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>parent testimonials</div> 
+              {/* <Carousel /> */}
+              <TestimonialCarousel />
+            </div>
+          </div>
     </div>
   )
 }
