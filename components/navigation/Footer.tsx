@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { FaFacebook, FaGooglePlus, FaInstagram, FaTwitter } from 'react-icons/fa'
 import CompanyLogo from '../../assets/Garfield_logo.png'
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Site = [
   {
@@ -53,17 +55,43 @@ const More = [
 
 export default function Footer() {
   const [email,setEmail] = useState()
+  const [loading,setLoading] = useState(false);
+
   const inputEmail = (e: any) => {
     setEmail(e);
   }
   
   const submitEmail = async () => {
-   alert(email)
+    setLoading(!loading)
+    if(email){
+        let config = {
+          method: 'post',
+          url: 'http://localhost:3000/api/join',
+          headers: {
+            'Content-TYpe': 'application/json'
+          },
+          data: email,
+        };
+        
+        try {
+          const response = await axios(config);
+          console.log(response);
+          toast('You have subscribed successfully.');
+          setLoading(false);
+        } catch (error) {
+          toast('Please try again and check your email');
+          setLoading(false);
+        }
+
+      } else {
+        setLoading(false);
+    }
   }
 
   return (
     <>
-      <div className='flex w-full py-20 bg-gradient-to-r from-red-400 to-red-500'>
+      <Toaster />
+      <div className='flex w-full py-20 bg-red-600'>
           <div className='w-11/12 sm:w-8/12 m-auto flex flex-wrap'>
             <div className='w-full sm:w-1/4 text-center'>
               <div className='text-white font-semibold text-sm'>
@@ -73,7 +101,7 @@ export default function Footer() {
                     objectFit={'cover'}
                     alt="Company logo"/>
                 </div>
-                Garfiled Primary (PTY) Ltd
+                <p className='text-xl'>Garfield Pre-Primary</p>
                 
               </div>
             </div><div className='w-full sm:w-1/4 text-center'>
@@ -109,7 +137,7 @@ export default function Footer() {
               </div>
               <div className='flex mt-5 justify-center sm:justify-start'>
                   <input type="text" className='border rounded-l p-2 outline-0' onChange={(e) => inputEmail(e.target.value)}/>
-                  <button onClick={submitEmail} className='bg-yellow-500 hover:bg-yellow-400 rounded-r text-white px-5'>Submit</button>
+                  <button onClick={submitEmail} className='bg-yellow-500 hover:bg-yellow-400 rounded-r text-white px-5'>{!loading ? 'Submit' : <div className='w-full'><div className='loader'></div></div>}</button>
               </div>
             </div>
           </div>
@@ -117,7 +145,7 @@ export default function Footer() {
       <div className='flex w-full bg-red-700 py-5'>
           <div className='flex sm:w-8/12 text-sm justify-between text-white m-auto'>
             <div>
-              Garfield Primary &copy; <span className='text-xs'>01/12/2022</span> 
+              Garfield Pre-Primary &copy; <span className='text-xs'>01/12/2022</span> 
             </div>  
             <div>
               Powered by Vano Tech (PTY) Ltd

@@ -46,13 +46,13 @@ export default function About() {
       <div className='w-full py-16'>
         <div className='flex flex-wrap w-9/12 m-auto text-gray-600'>
           <div className='w-full sm:w-2/3 p-5'>
-                <h2 className='font-bold pb-5 text-6xl uppercase text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>About Us</h2>
+                <h2 className='font-bold pb-5 text-5xl sm:text-6xl uppercase text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>About Us</h2>
                 <p className="text-lg">
                   We aim to build a strong foundation in all areas of development to
                   send happy ,confident ,well-balanced children into the world instilled
                   with a lifelong love of learning.
                   </p>
-                <h2 className='font-bold pt-16 pb-5 text-5xl text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>WHAT WE OFFER</h2>
+                <h2 className='font-bold pt-16 pb-5  text-4xl sm:text-5xl text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>WHAT WE OFFER</h2>
                 <ul className="text-lg">
                   {Offers.map(d => {
                     return <li className='flex py-3 text-md items-center' key={d.id}><p className='mr-5'>{d.icon}</p> {d.text}</li>

@@ -38,7 +38,7 @@ export default function Home() {
         height="h-[55vh] xl:h-[71vh]"
         image="https://cdn.pixabay.com/photo/2020/04/09/08/06/kid-5020226_1280.jpg"/>
         <div className="bg-gray-50">
-          <div className='border-2 shadow-xl border-red-500 bg-gradient-to-r from-red-400 to-red-500'>
+          <div className='border-2 shadow-xl border-red-500 bg-red-600'>
             <div className="mx-auto shadow-b max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-5 lg:px-8">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 <span className="block text-white">Welcome to Garfield</span>
@@ -48,7 +48,7 @@ export default function Home() {
                 <div className="inline-flex rounded-md shadow">
                   <a
                     href="/application_for_enrolment"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-5 py-3 text-base font-medium text-white hover:bg-yellow-300"
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-7 py-2 text-base font-medium text-white hover:bg-yellow-300"
                   >
                     Apply
                   </a>
@@ -56,7 +56,7 @@ export default function Home() {
                 <div className="ml-3 inline-flex rounded-md shadow">
                   <a
                     href="/about"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-white hover:bg-gray-700 "
+                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-7 py-2 text-base font-medium text-white hover:bg-gray-700 "
                   >
                     Get More Info
                   </a>

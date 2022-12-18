@@ -1,7 +1,10 @@
 
 import Head from 'next/head'
+import { useState } from 'react'
+import { toast } from 'react-hot-toast'
 import { FaAngleRight } from 'react-icons/fa'
 import Header from '../components/header/index'
+import axios from 'axios'
 
 const Rules = [
   {
@@ -12,7 +15,7 @@ const Rules = [
   {
     id: 2,
     icon: <FaAngleRight />,
-    text: 'A non-refundable deposit of R 300.00 must accompany this application form. This will be deducted from the school fees for the last term the child spends t Garfield Pre-primary School.',
+    text: 'A non-refundable deposit of R 300.00 must accompany this application form. This will be deducted from the school fees for the last term the child spends at Garfield Pre-primary School.',
   },
   {
     id: 3,
@@ -27,6 +30,58 @@ const Rules = [
 ]
 
 export default function About() {
+  const [ formData, setFormData ] = useState({
+    dname: '',
+    mname: '',
+    address: '',
+    homeTel: '',
+    fwork: '',
+    mwork: '',
+    fcell: '',
+    mcell: '',
+    email: '',
+    fname: '',
+    dob: '',
+    religion: '',
+    hlang: '',
+    enrollDate: '',
+    pgroup: '',
+    aftercare: '',
+  });
+  const [ loading, setLoading ] = useState(false)
+
+  const changeFormData = (e: any) => {
+    setFormData((formData) => ({...formData,[e.target.name]:e.target.value}))
+  }
+
+  const SubmitApplication = async() => {
+    setLoading(!loading)
+    if(formData.dname !== '' && formData.mname !== '' ){
+        let config = {
+          method: 'post',
+          url: 'http://localhost:3001/api/application',
+          headers: {
+            'Content-TYpe': 'application/json'
+          },
+          data: formData,
+        };
+        
+        try {
+          const response = await axios(config);
+          console.log(response);
+          toast('Application form was successfully submitted.');
+          setLoading(false);
+        } catch (error) {
+          console.log(error);
+          setLoading(false);
+        }
+
+      } else {
+        setLoading(false);
+        toast('Application form needs to be completed.');
+    }
+  }
+
   return (
     <div>
       <Head>
@@ -51,7 +106,7 @@ export default function About() {
                 Father's Name
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="dname" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="dname" required={true}/>
                 </div>
               </div>
               <div className='w-full sm:w-1/2'>
@@ -59,7 +114,7 @@ export default function About() {
                 Mother's Name
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="mname" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="mname" />
                 </div>
               </div>
             </div>
@@ -67,7 +122,7 @@ export default function About() {
               Address
             </div>
             <div className='w-full pb-8'>
-              <input type="text" className='border w-full p-2 rounded' name="address" />
+              <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="address" />
             </div>
             <div className='w-full py-5 font-semibold text-xl border-b border-gray-300'>
               Contact Details
@@ -76,7 +131,7 @@ export default function About() {
               Home Tel
             </div>
             <div className='w-full'>
-              <input type="text" className='border w-full p-2 rounded' name="homeTel" />
+              <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="homeTel" />
             </div>
             <div className='w-full flex flex-wrap'>
               <div className='w-full sm:w-1/2 sm:pr-5'>
@@ -84,7 +139,7 @@ export default function About() {
                 Father's  Work Tel No
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="fwork" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="fwork" />
                 </div>
               </div>
               <div className='w-full sm:w-1/2'>
@@ -92,7 +147,7 @@ export default function About() {
                 Mother's Work Tel No
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="mwork" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="mwork" />
                 </div>
               </div>
             </div>
@@ -102,7 +157,7 @@ export default function About() {
                 Father's Cell No
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="fcell" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="fcell" />
                 </div>
               </div>
               <div className='w-full sm:w-1/2'>
@@ -110,7 +165,7 @@ export default function About() {
                 Mother's Cell No
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="mcell" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="mcell" />
                 </div>
               </div>
             </div>
@@ -118,7 +173,7 @@ export default function About() {
               Email Address
             </div>
             <div className='w-full pb-8'>
-              <input type="text" className='border w-full p-2 rounded' name="email" />
+              <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="email" />
             </div>
             <div className='w-full py-5 font-semibold text-xl border-b border-gray-300'>
               Child's Details
@@ -127,13 +182,13 @@ export default function About() {
               Full Name of Child
             </div>
             <div className='w-full'>
-              <input type="text" className='border w-full p-2 rounded' name="fname" />
+              <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="fname" />
             </div>
             <div className='py-2'>
               Child's Date of Birth
             </div>
             <div className='w-full'>
-              <input type="date" className='border w-full p-2 rounded' name="dob" />
+              <input type="date" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="dob" />
             </div>
             <div className='w-full flex flex-wrap'>
               <div className='w-full sm:w-1/2 sm:pr-5'>
@@ -141,7 +196,7 @@ export default function About() {
                 Religion
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="religion" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="religion" />
                 </div>
               </div>
               <div className='w-full sm:w-1/2'>
@@ -149,7 +204,7 @@ export default function About() {
                 Home Language
                 </div>
                 <div className='w-full'>
-                  <input type="text" className='border w-full p-2 rounded' name="hlang" />
+                  <input type="text" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="hlang" />
                 </div>
               </div>
             </div>
@@ -157,7 +212,7 @@ export default function About() {
               Date Child will Enter Garfield
             </div>
             <div className='w-full pb-8'>
-              <input type="date" className='border w-full p-2 rounded' name="enroll" />
+              <input type="date" className='border w-full p-2 rounded' onChange={(e) => changeFormData(e)} name="enrollDate" />
             </div>
             <div className='w-full py-5 font-semibold text-xl border-b border-gray-300'>
               Child's Info
@@ -170,10 +225,10 @@ export default function About() {
               </div>
               <div className='w-36 sm:w-56 flex justify-between'>
                 <div className='flex items-center'>
-                  <input type="radio" name="pgroup" className='w-1/2 h-6 w-6'/><p className='ml-3'>YES</p>
+                  <input type="radio" value="Yes" name="pgroup" onChange={(e) => changeFormData(e)} className='w-1/2 h-6 w-6'/><p className='ml-3'>YES</p>
                 </div>
                 <div className='flex items-center'>
-                  <input type="radio" name="pgroup" className='w-1/2 h-6 w-6' /><p className='ml-3'>NO</p>
+                  <input type="radio" value="No" name="pgroup" onChange={(e) => changeFormData(e)} className='w-1/2 h-6 w-6' /><p className='ml-3'>NO</p>
                 </div>
               </div>
             </div>
@@ -185,10 +240,10 @@ export default function About() {
               </div>
               <div className='w-56 flex justify-between'>
                 <div className='flex items-center'>
-                  <input type="radio" name="aftercare" className='w-1/2 h-6 w-6'/><p className='ml-3'>YES</p>
+                  <input type="radio" value="Yes" name="aftercare" onChange={(e) => changeFormData(e)} className='w-1/2 h-6 w-6'/><p className='ml-3'>YES</p>
                 </div>
                 <div className='flex items-center'>
-                  <input type="radio" name="aftercare" className='w-1/2 h-6 w-6' /><p className='ml-3'>NO</p>
+                  <input type="radio" value="No" name="aftercare" onChange={(e) => changeFormData(e)} className='w-1/2 h-6 w-6' /><p className='ml-3'>NO</p>
                 </div>
               </div>
             </div>
@@ -203,9 +258,13 @@ export default function About() {
               </ul>
             </div>
           </div>
+          <div 
+            className='bg-red-600 hover:bg-red-500 text center rounded py-2 text-white text-center font-semibold mt-10 w-96 m-auto cursor-pointer'
+            onClick={() => SubmitApplication()}>
+              {!loading ? 'Enroll at Garfield Pre-Primary' : <div className='flex w-full justify-center'><div className='loader'></div></div>}
+          </div>
         </div>
       </div>
     </div>
   )
 }
- {/* <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" rel="noopener noreferrer" ><button>Download CV</button></a> */}

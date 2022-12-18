@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Header from '../components/header/index'
+import axios from 'axios'
+import { toast } from 'react-hot-toast';
 
 export default function Contact() {
   const [formData, setFormData ] = useState({
@@ -11,17 +13,64 @@ export default function Contact() {
     subject: '',
     message: '',
   });
-  const [ error, setError ] = useState()
+  const [ error, setError ] = useState({
+    name: '',
+    surname: '',
+    mobile: '',
+    email: '',
+    subject: '',
+    message: '',
+  })
+  const [ loading, setLoading ] = useState(false)
 
   const changeFormData = (e: any) => {
     setFormData((formData) => ({...formData,[e.target.name]:e.target.value}))
+    setError((error) => ({...error,[e.target.name]:e.target.value}))
   }
 
-  const submitForm = () => {
-    if(formData.name === ''){
-      alert('Please Enter name')
+  const submitForm = async() => {
+    if(formData.name === '') {
+      setError((error) => ({...error,name:'Please enter your name!'}))
     }
-    alert(JSON.stringify(formData))
+    if(formData.surname === '') {
+      setError((error) => ({...error,surname:'Please enter your surname!'}))
+    }
+    if(formData.mobile === '') {
+      setError((error) => ({...error,mobile:'Please enter your mobile number!'}))
+    }
+    if(formData.email === '') {
+      setError((error) => ({...error,email:'Please enter your email address!'}))
+    }
+    if(formData.subject === '') {
+      setError((error) => ({...error,subject:'Please select a subject!'}))
+    }
+    if(formData.message === '') {
+      setError((error) => ({...error,message:'Please enter a message!'}))
+    }
+    setLoading(!loading)
+    if(formData.name !== ''){
+        let config = {
+          method: 'post',
+          url: 'http://localhost:3000/api/contact',
+          headers: {
+            'Content-TYpe': 'application/json'
+          },
+          data: formData,
+        };
+        
+        try {
+          const response = await axios(config);
+          console.log(response);
+          toast('Contact form was successfully submitted.');
+          setLoading(false);
+        } catch (error) {
+          console.log(error);
+          setLoading(false);
+        }
+
+      } else {
+        setLoading(false);
+    }
   }
 
   return (
@@ -58,7 +107,7 @@ export default function Contact() {
               </select>
               <div className='py-2'>Message</div>
               <textarea className='w-11/12 rounded p-2 h-36 border' name="message" onChange={(e) => changeFormData(e)}  style={{resize: 'none'}}  placeholder='Type message'></textarea>
-              <button onClick={submitForm} className='mt-5 w-11/12 bg-yellow-500 hover:bg-yellow-600 py-2 text-white rounded'>Submit</button>
+              <button onClick={submitForm} className='mt-5 w-11/12 bg-yellow-500 hover:bg-yellow-600 py-2 text-white rounded'>{!loading ? 'Submit' : <div className='flex w-full justify-center'><div className='loader'></div></div>}</button>
             </div>
           </div>
           <div className='w-full sm:w-1/2 py-6'>
