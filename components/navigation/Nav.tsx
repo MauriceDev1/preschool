@@ -66,6 +66,7 @@ export default function Nav() {
                 <Image
                   src={CompanyLogo}
                   objectFit={'cover'}
+                  priority={true}
                   alt="company logo"/>
               </div>
             </Link>
