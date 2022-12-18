@@ -37,7 +37,11 @@ export default function Prospectus() {
               </p>
             </div>
             <div className='sm:w-1/3 sm:pt-28' style={{zIndex:'1'}}>
-              <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
+              <Image 
+                src={Gar} 
+                objectFit={'cover'}
+                loading="eager" 
+                style={{borderRadius:'10px',zIndex:'1'}}/> 
             </div>
           </div>
         </div>

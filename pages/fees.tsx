@@ -59,7 +59,11 @@ export default function Fees() {
             </div>
             </div>
             <div className='sm:w-1/3 sm:pt-36' style={{zIndex:'1'}}>
-              <Image src={Gar} objectFit={'cover'} style={{borderRadius:'10px',zIndex:'1'}}/> 
+              <Image 
+                src={Gar} 
+                objectFit={'cover'}
+                loading="eager" 
+                style={{borderRadius:'10px',zIndex:'1'}}/> 
             </div>
         </div>
       </div>
