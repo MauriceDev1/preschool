@@ -69,6 +69,7 @@ export default function Carousel() {
             <Image 
                 src={Cath}
                 objectFit={'contain'}
+                loading="eager"
                 alt={'Teacher 1 image'} />
             <div className='bg-red-600 py-2 -mt-2 w-full text-center font-semibold text-xl text-white'>
               Cathy (Principal)
@@ -80,6 +81,7 @@ export default function Carousel() {
             <Image 
                 src={Constance}
                 objectFit={'contain'}
+                loading="eager"
                 alt={'Teacher 1 image'} />
             <div className='bg-red-600 py-2 -mt-2 w-full text-center font-semibold text-xl text-white'>
               Constance
