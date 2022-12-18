@@ -57,6 +57,7 @@ export default function Carousel() {
             <Image 
                 src={Mia}
                 objectFit={'contain'}
+                loading="eager"
                 alt={'Teacher 1 image'} />
             <div className='bg-red-600 py-2 -mt-2 w-full text-center font-semibold text-xl text-white'>
               Mia
