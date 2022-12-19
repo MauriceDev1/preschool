@@ -49,7 +49,7 @@ export default function About() {
                 <h2 className='font-bold pb-5 text-5xl sm:text-6xl uppercase text-red-600' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>About Us</h2>
                 <p className="text-lg">
                   We aim to build a strong foundation in all areas of development to
-                  send happy ,confident ,well-balanced children into the world instilled
+                  send happy, confident, well-balanced children into the world instilled
                   with a lifelong love of learning.
                   </p>
                 <h2 className='font-bold pt-16 pb-5  text-4xl sm:text-5xl text-yellow-500' style={{fontFamily: 'Ultra',letterSpacing: '3px'}}>WHAT WE OFFER</h2>

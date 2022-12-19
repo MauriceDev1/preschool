@@ -36,7 +36,8 @@ export default function Fees() {
               of the annual budget. A PTA has been established to help raise funds for 
               additional toys, books and equipment
             </p>
-            <div className='flex rounded border-yellow-500 flex-wrap w-11/12 m-auto mt-10 border'>
+            <h1 className='text-xl mt-5 ml-7 text-red-500'>MONTHLY FEES</h1>
+            <div className='flex rounded border-yellow-500 flex-wrap w-11/12 m-auto mt-5 border'>
               <div className='font-semibold w-1/3 border-r  border-yellow-500 py-5 text-center'>
                 FULL DAY
               </div>
